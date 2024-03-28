@@ -32,7 +32,7 @@ filename = f"temp/screenshot.png"
 edited_clip.save_frame(filename, t=clips[0].duration - 0.5)
 Image(filename=filename, width=200)
 
-edited_clip.write_videofile("output/final_video.mp4", codec="libx264", audio_codec="mp3", fps=3)
+edited_clip.write_videofile("output/final_video.mp4", codec="libx264", audio_codec="mp3", fps=24)
 
 for file in os.listdir('temp'):
     os.remove(f'temp/{file}')

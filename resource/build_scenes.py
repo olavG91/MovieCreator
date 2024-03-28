@@ -12,8 +12,8 @@ clips = []
 def create_scenes(scenes):
     for scene in scenes:
         for content in scene["content"]:
-            audio_filename = "7a068442-7351-485c-a2d8-60d579fd7aa7.mp3"
-            #audio_filename = create_audio(scene["transcribe"])
+            #audio_filename = "7a068442-7351-485c-a2d8-60d579fd7aa7.mp3"
+            audio_filename = create_audio(scene["transcribe"])
             audio = AudioFileClip(audio_filename)
 
             if content["type"] == "video":
