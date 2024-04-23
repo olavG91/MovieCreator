@@ -1,7 +1,11 @@
 from openai import OpenAI
 import json
+from dotenv import load_dotenv
+import os
 
-client = OpenAI()
+load_dotenv()
+
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 def generate_search_keywords_and_text(video_type):
     messages=[
@@ -67,7 +71,7 @@ def generate_search_keywords_and_text(video_type):
     ]
 
     response = client.chat.completions.create(
-        model="gpt-4-turbo-preview",
+        model="gpt-4-turbo",
         messages=messages,
         functions=functions,
         temperature=0.5

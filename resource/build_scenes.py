@@ -1,5 +1,4 @@
 from moviepy.editor import CompositeVideoClip, ImageClip, AudioFileClip, TextClip, transfx, VideoFileClip
-
 from resource.video_tools import resize_clip_to_fit, adjust_text_to_max_length
 from resource.external_audio import create_audio
 
@@ -12,10 +11,9 @@ clips = []
 def create_scenes(scenes):
     for scene in scenes:
         for content in scene["content"]:
-            #audio_filename = "7a068442-7351-485c-a2d8-60d579fd7aa7.mp3"
             audio_filename = create_audio(scene["transcribe"])
             audio = AudioFileClip(audio_filename)
-
+            
             if content["type"] == "video":
                 content_clip = VideoFileClip(content["url"]).set_duration(audio.duration + 1).set_audio(audio)
             else:

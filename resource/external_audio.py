@@ -1,7 +1,11 @@
 import requests
 import uuid
+from dotenv import load_dotenv
+import os
 
-elevenlabs_api_key = 'aeda2f6f52219ccc7705f99513d93cb1'
+load_dotenv()
+
+elevenlabs_api_key = os.getenv('ELEVENLABS_API_KEY')
 
 def create_audio(text):
     CHUNK_SIZE = 1024

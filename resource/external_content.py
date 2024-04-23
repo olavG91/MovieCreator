@@ -1,8 +1,12 @@
 import requests
 import json
 import random
+from dotenv import load_dotenv
+import os
 
-pixabay_api_key = '42911360-3ee40ed889ed85ecce5deb39e'
+load_dotenv()
+
+pixabay_api_key = os.getenv('PIXABAY_API_KEY')
 
 def search_pixabay_videos(query):
     response = requests.get(f"https://pixabay.com/api/videos/?key={pixabay_api_key}&q={query}")
