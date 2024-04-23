@@ -43,8 +43,8 @@ The script is designed to clean up all temporary files stored in the temp direct
 ## Contributing
 Contributions to improve the toolkit are welcome. Please fork the repository and submit pull requests with your suggested changes.
 
-License
-This project is available under [License Name]. For more details, see the LICENSE file in the repository.
+## License
+This project is released under the MIT License, which permits unrestricted use, distribution, and modification in any medium, provided the original author and source are credited. This open license is designed to encourage the free use and dissemination of this software for both personal and commercial applications.
 
-Note
+## Note
 Ensure the creation of necessary directories (temp/ and output/) if they do not exist, or verify that the script includes their creation to avoid errors during runtime.
